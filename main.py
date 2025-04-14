@@ -1,7 +1,6 @@
-from database import engine
-from models import Base
+from app.app import create_app
 
-# 寫入所有 models 到資料庫
-Base.metadata.create_all(bind=engine)
+app = create_app()
 
-print("✅ 資料表已成功建立！")
+if __name__ == "__main__":
+    app.run(debug=True, port=5002)
