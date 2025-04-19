@@ -3,7 +3,7 @@ import random
 import requests
 from app.config import Config
 
-auth_bp = Blueprint("auth", __name__)
+auth_bp = Blueprint("auth", __name__, url_prefix="/api/auth")
 
 captcha_codes = {}
 

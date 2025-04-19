@@ -4,7 +4,7 @@ from sqlalchemy.exc import IntegrityError
 from app.database import get_db
 from app.models.member import Member
 
-member_bp = Blueprint("members", __name__, url_prefix="/members")
+member_bp = Blueprint("members", __name__, url_prefix="/api/members")
 
 
 @member_bp.route("", methods=["POST"])

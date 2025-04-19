@@ -3,7 +3,7 @@ from datetime import datetime
 from app.database import get_db
 from app.models.activity import Activity
 
-activity_bp = Blueprint("activity", __name__, url_prefix="/activities")
+activity_bp = Blueprint("activity", __name__, url_prefix="/api/activities")
 
 
 @activity_bp.route("", methods=["POST"])
